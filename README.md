@@ -32,11 +32,11 @@ The primary objective of this project is to process a provided dataset from a fi
 
 #### architecture
 
-**Domain Layer**: Contains the core domain concepts, such as Person, Gender, and AddressBook. This layer is responsible for defining the business rules and domain logic.
+- **Domain Layer**: Contains the core domain concepts, such as Person, Gender, and AddressBook. This layer is responsible for defining the business rules and domain logic.
 
-**Infrastructure Layer**: Provides implementations for domain interfaces, such as the PersonDataSource for reading person data and the PersonMapper for converting raw data strings into Person objects.
+- **Infrastructure Layer**: Provides implementations for domain interfaces, such as the PersonDataSource for reading person data and the PersonMapper for converting raw data strings into Person objects.
 
-**AddressBookApplication.java (Application Layer)**: Coordinates the interactions between the domain and infrastructure layers, such as reading the address book data, creating an AddressBook object, and performing the operations **required within the technical assessment**.
+- **AddressBookApplication.java (Application Layer)**: Coordinates the interactions between the domain and infrastructure layers, such as reading the address book data, creating an AddressBook object, and performing the operations **required within the technical assessment**.
 
 #### design patterns
 
