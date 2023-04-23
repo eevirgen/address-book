@@ -28,7 +28,7 @@ public class AddressBookApplicationIntegrationTest {
         assertEquals(3, addressBook.countMales());
 
         // Oldest person: Wes Jackson
-        assertEquals("Wes Jackson", addressBook.findTheOldestPerson().name());
+        assertEquals("Wes Jackson", addressBook.findTheOldestPerson().getName());
 
         // Bill is 2862 days older than Paul.
         Optional<Long> daysDifference = addressBook.daysDifferenceBetweenTwoPeople("Bill McKnight", "Paul Robinson");

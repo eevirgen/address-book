@@ -26,11 +26,11 @@ public class AddressBook {
     }
 
     public long countMales() {
-        return people.stream().filter(person -> person.gender() == Gender.MALE).count();
+        return people.stream().filter(person -> person.getGender() == Gender.MALE).count();
     }
 
     public Person findTheOldestPerson() {
-        return people.stream().min(Comparator.comparing(Person::dateOfBirth)).orElse(null);
+        return people.stream().min(Comparator.comparing(Person::getDateOfBirth)).orElse(null);
     }
 
     public Optional<Long> daysDifferenceBetweenTwoPeople(String name1, String name2) {
@@ -42,12 +42,12 @@ public class AddressBook {
             throw new InvalidPersonException("One or both names not found in the address book.");
         }
 
-        return Optional.of(ChronoUnit.DAYS.between(person1.get().dateOfBirth(), person2.get().dateOfBirth()));
+        return Optional.of(ChronoUnit.DAYS.between(person1.get().getDateOfBirth(), person2.get().getDateOfBirth()));
     }
 
     // Finds a person in the address book by their name (case-insensitive)
     private Person findPersonByName(String name) {
-        return people.stream().filter(person -> person.name().equalsIgnoreCase(name)).findFirst().orElse(null);
+        return people.stream().filter(person -> person.getName().equalsIgnoreCase(name)).findFirst().orElse(null);
     }
 
     public List<Person> getPeople() {

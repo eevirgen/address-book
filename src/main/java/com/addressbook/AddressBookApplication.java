@@ -17,7 +17,7 @@ public class AddressBookApplication {
         AddressBook addressBook = reader.readAddressBook();
 
         System.out.println("Number of males: " + addressBook.countMales());
-        System.out.println("Oldest person: " + addressBook.findTheOldestPerson().name());
+        System.out.println("Oldest person: " + addressBook.findTheOldestPerson().getName());
         Optional<Long> daysDifference = addressBook.daysDifferenceBetweenTwoPeople("Bill McKnight", "Paul Robinson");
         daysDifference.ifPresentOrElse(
                 difference -> System.out.println("Bill is " + difference + " days older than Paul."),

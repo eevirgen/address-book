@@ -16,9 +16,9 @@ class PersonMapperTest {
         PersonMapper personMapper = new PersonMapper();
         Person person = personMapper.map(validPersonString);
 
-        assertEquals("John Doe", person.name());
-        assertEquals(Gender.MALE, person.gender());
-        assertEquals(1990, person.dateOfBirth().getYear());
+        assertEquals("John Doe", person.getName());
+        assertEquals(Gender.MALE, person.getGender());
+        assertEquals(1990, person.getDateOfBirth().getYear());
     }
 
     @Test
